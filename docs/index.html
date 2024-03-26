@@ -74,6 +74,25 @@ Interactive Mobile Manipulators</h1>
   AMPC approach on several tasks such as carrying, pushing,
   and door opening.</p>
 
+<h2 id="Methodology">Methodology</h2>
+Since many robotic tasks can be
+described by a combination of simple carrying, pushing,
+and pulling tasks, a Spring-Mass-Damper (SMD) system is used to model the
+contact forces exerted by the robot on the environment. The
+parameters of the SMD system are adjusted online while
+an unknown task is executed. To achieve this, we collect a dataset 
+of state errors from known environments with different contact dynamics.
+Then, we model the joint probability distribution of the dynamic parameters
+and the state error measurements as multivariate Gaussian
+Mixture Models (GMMs), one for each executed task. For
+prediction, we use a hierarchical approach. First, the most
+likely GMMs for the current task are selected by comparing
+their log-likelihoods using state error measurements as input.
+Then, the computed probabilities are used to predict the
+environmental damping and stiffness by weighted averages.
+Second, the most likely model is used to predict the remaining
+dynamic model parameters online, i.e., spring mass, inertia, and
+static force.
 <figure>
   <img src="static/figures/graph_abstract.png" width="90%" alt="fig:graph_abstract">
   <figcaption>
@@ -81,8 +100,19 @@ Interactive Mobile Manipulators</h1>
   </figcaption>
 </figure>
 
-<h2 id="results">Experimental Results</h2>
-<p>test.</p>
+<h2 id="results">Experimental Evaluation</h2>
+In the following video, the results from three experiments are
+presented. First, the generality of the proposed
+method is compared to baseline methods by evaluating
+the performance on executing unseen, unrelated tasks with
+increasing complexity (see Fig. 1.a). Second, we focus on
+similar tasks where the environment parameters are very
+difficult to distinguish because of overlapping effects, such as
+pushing objects over different floors and opening doors with
+friction. Thirdly, our method is applied on the real system
+to show its feasibility for carrying and pulling tasks.
+<video src="video/icra24_gmlMPC_video.mp4" controls="controls" style="max-width: 48em;">
+</video>
 
 <h4 id="copyright">Copyright</h4>
 <p>Copyright on the material in this webpage has been transferred to IEEE for ICRA 2024: D. Rakovitis and D. Mronga, 
