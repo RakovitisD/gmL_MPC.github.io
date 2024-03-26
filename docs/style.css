@@ -15,6 +15,7 @@ body {
   max-width: 48em;
   background: #ffffff;
   text-align: justify;
+  text-align-last: left;
 }
 
 a {
