@@ -51,7 +51,35 @@ Interactive Mobile Manipulators</h1>
 </header>
 
 <h2 id="introduction">Introduction</h2>
-<p>test.</p>
+<p>Mobile robots are nowadays frequently used for
+  interaction tasks in the real world, e.g. for opening doors or for
+  pick-and-place tasks. When used in real-world environments,
+  adapting the robot controllers to uncertain contact dynamics
+  is a significant challenge. Adaptive Model Predictive Control
+  (AMPC) is an approach for controlling robot motions while
+  adapting to uncertain or changing dynamics. However, most
+  of the existing AMPC approaches used in mobile manipulation
+  require either expert tuning or extensive training, making it
+  very difficult to introduce novel or diverse tasks. In addition,
+  the adjustment of several, independent environment parameters
+  is usually not considered in the AMPC formulation. In this
+  work, we introduce a hierarchical approach that uses Gaussian
+  Mixture Models (GMMs) and Gaussian Mixture Regression
+  (GMR) to predict the dynamic model parameters of MPC
+  based on proprioceptive measurements and perform tasks with
+  multiple unknown environmental parameters. The approach is
+  evaluated in simulation and in real experiments on a mobile
+  manipulator and compared to several baseline methods. It
+  is shown that it outperforms standard MPC and an existing
+  AMPC approach on several tasks such as carrying, pushing,
+  and door opening.</p>
+
+<figure>
+  <img src="static/figures/graph_abstract.png" width="90%" alt="fig:graph_abstract">
+  <figcaption>
+    Fig.1 - Graphical abstract of the proposed AMPC approach.
+  </figcaption>
+</figure>
 
 <h2 id="results">Experimental Results</h2>
 <p>test.</p>
@@ -61,9 +89,9 @@ Interactive Mobile Manipulators</h1>
   “Gaussian Mixture Likelihood-based Adaptive MPC for Interactive Mobile Manipulators”, 2024 IEEE International Conference on 
   Robotics and Automation, Yokohama, Japan, 2024</p>
 <footer>
-  <img src="static/dfki_logo.svg" style="width:312px">
-  <img src="static/hartu_logo.png" style="width:312px">
-  <img src="static/eu_logo.png" style="width:312px">
+  <img src="static/dfki_logo.svg" style="height:65px">
+  <img src="static/hartu_logo.png" style="height:65px">
+  <img src="static/eu_logo.png" style="height:65px">
 </footer>
 </body>
 </html>
