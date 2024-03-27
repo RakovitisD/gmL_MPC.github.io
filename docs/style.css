@@ -14,8 +14,6 @@ body {
   margin: auto;
   max-width: 48em;
   background: #ffffff;
-  text-align: justify;
-  text-align-last: left;
 }
 
 a {
@@ -323,6 +321,8 @@ table td {
   p, h2, h3 {
     orphans: 3;
     widows: 3;
+    text-align: justify;
+    text-align-last: left;
   }
 
   h2, h3 {
